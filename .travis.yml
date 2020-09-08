@@ -20,6 +20,7 @@ install:
     export PATH=$JAVA_HOME:$PATH;
     fi
     fi
+  - iptables -A INPUT -i docker0 -j ACCEPT
 
 script:
   - rm -rf $HOME/.m2/repository/org/glassfish/javax.el/3.0.1-b08
